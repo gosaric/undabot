@@ -5,7 +5,7 @@ class SearchIssues extends GithubProvider
 {
     protected static $partialUrl = '/search/issues';
 
-    public function query(string $q) : string
+    public function query(string $q) : array
     {
         $rawData = $this->download(self::$partialUrl . '?q=' . $q);
 

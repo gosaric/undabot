@@ -18,7 +18,10 @@ class ScoreController extends AbstractController
 
         $data = $this->getDoctrine()
             ->getRepository(Keyword::class)
-            ->findOneBy(['name' => $term, 'provider' => $providerId]);
+            ->findOneBy([
+                'name' => $term,
+                'provider' => $providerId
+            ]);
 
         if (!$data) {
             $data = $provider->queryUndabot($term);

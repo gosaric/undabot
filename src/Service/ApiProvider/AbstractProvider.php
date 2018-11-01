@@ -10,7 +10,7 @@ abstract class AbstractProvider
         $this->apiBaseUrl = $url;
     }
 
-    abstract public function query(string $q) : string;
+    abstract public function query(string $q) : array;
 
     protected function download(string $q) : string
     {
